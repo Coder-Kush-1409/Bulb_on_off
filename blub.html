@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 21rem;
+            margin: 11rem auto
+        
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 1px solid deeppink;
+            border-radius: 9rem;
+            width: 8rem;
+            margin: -29px 32rem;
+            cursor: pointer;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./OFFbulb.jpg" alt="" id="bulb1">
+        <img src="./OFFbulb.jpg" alt="" id="bulb2">
+        <img src="./OFFbulb.jpg" alt="" id="bulb3">
+        <img src="./OFFbulb.jpg" alt="" id="bulb4">
+        <img src="./OFFbulb.jpg" alt="" id="bulb5">
+    </div>
+
+    <button id="btn">Bulb Off</button>
+
+
+
+    <script>
+
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            for(x=1;x<6;x++){
+            let bulb=document.getElementById("bulb".concat(x))
+            if(bulb.src.match("ONbulb")){
+                bulb.src="OFFbulb.jpg"
+            }else{
+                bulb.src="ONbulb.jpg"
+            }
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
